@@ -1,0 +1,19 @@
+// base
+@import './Styles/mixins';
+@import './Styles/base';
+@import './Styles/variables';
+
+// font awesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+
+// partials
+@import './Styles/Partials/header';
+@import './Styles/Partials/blocks';
+@import './Styles/Partials/intro';
+@import './Styles/Partials/highlights';
+@import './Styles/Partials/jobs';
+@import './Styles/Partials/about';
+@import './Styles/Partials/footer';

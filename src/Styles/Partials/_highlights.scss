@@ -1,0 +1,37 @@
+.highlights {
+	> div {
+		font-family: $mainfont;
+		line-height: 1rem;
+		font-size: 1rem;
+		font-weight: 700;
+		color: $neutral2;
+
+		@include breakpoint(medium) {
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
+
+		@include breakpoint(large) {
+			font-size: 1.5rem;
+		}
+
+		i {
+			font-size: 2rem;
+			vertical-align: middle;
+			margin-right: 2rem;
+			margin-bottom: 0.75rem;
+			color: $neutral4;
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+
+		.btn i {
+			color: $neutral2;
+			font-size: 1rem;
+		}
+	}
+}

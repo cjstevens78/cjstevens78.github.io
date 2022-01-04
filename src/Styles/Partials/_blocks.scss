@@ -1,0 +1,50 @@
+%body-row {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.row {
+	margin-left: 0 !important; //override bs class
+	margin-right: 0 !important; //override bs class
+
+	@include breakpoint(medium) {
+	  padding-left: 5rem;
+	  padding-right: 5rem;
+	}
+
+	&.row-type-1 {
+		background-color: $neutral3; // grey
+	}
+
+	&.row-type-2 {
+		background-color: $color1; // blue
+
+		@extend %body-row;
+
+	}
+
+	&.row-type-3 {
+		background-color: $neutral1; // white
+
+		@extend %body-row;
+
+		.type-header h2 {
+			color: $neutral2;
+		}
+
+	}
+
+	&.row-type-4 {
+		background-color: $color3; // orange
+
+		@extend %body-row;
+
+	}
+
+	.type-header h2 {
+		color: $neutral1;
+		margin-bottom: 0;
+	}
+
+}
+
