@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,5 +39,5 @@
     "@fortawesome/fontawesome-free": "^5.8.1",
     "gh-pages": "^3.2.3"
   },
-  "homepage" : "https://cjstevens78.github.io/build/"
+  "homepage": "https://cjstevens78.github.io/build/"
 }
