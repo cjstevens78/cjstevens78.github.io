@@ -12,12 +12,12 @@ class App extends Component {
   state = {
     details: [
       {
-        availability: "Available",
+        availability: "Looking",
         email: "cjs78@hotmail.co.uk",
         mobile: "07809 758568",
         phone: "01252 641982",
         cvtext: "CV Download",
-        cvlink: "2020"
+        cvlink: "2022"
       }
     ],
     jobs: [
@@ -32,7 +32,7 @@ class App extends Component {
         glance2: "Working with PHP Drupal 8 and Wordpress platforms.", 
         glance3: "Use of usual skillset of HTML5, CSS3/SASS, Bootstrap 4, Accessibility, Sublime, Javascript, Extensive Command Line, GitHub.", 
         glance4: "Working on an open collaborative project to provide a white label website solution for councils.", 
-        link: "https://new.croydon.gov.uk/births-deaths-marriages-and-citizenship",
+        link: "https://www.croydon.gov.uk",
         imagetitle: "croydon"
       },
       { id: "bbbbb",
@@ -263,10 +263,10 @@ class App extends Component {
             />
         </header>
         <div className="row row-type-1">
-          <div className="col-sm-4 pt-4 pb-4 pr-4">
+          <div className="col-sm-3 pt-4 pb-4 pr-4">
             <img src={ Me } className="img-fluid" alt="Chris Stevens - Web Developer" />
           </div>
-          <div className="col-sm-8 p-4 intro">
+          <div className="col-sm-9 p-4 intro">
             <Intro />
           </div>
         </div>
