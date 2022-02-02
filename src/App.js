@@ -291,7 +291,7 @@ class App extends Component {
             <i className="fab fa-font-awesome" title="Font Awesome"></i>
           </div>
           <div className="col-12 text-center">
-          <a href="https://github.com/cjstevens78/cjs-react" className="btn btn-light" value="Download from GitHub" target="_blank" rel="noopener noreferrer">Download from GitHub <i className="fab fa-github"></i></a>
+          <a href="https://github.com/cjstevens78/cjstevens78.github.io/tree/gh-pages" className="btn btn-light" value="Download from GitHub" target="_blank" rel="noopener noreferrer">Download from GitHub <i className="fab fa-github"></i></a>
           </div>
         </div>
         {/* Coming Soon -- <div className="row row-type-3">
