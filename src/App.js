@@ -12,7 +12,7 @@ class App extends Component {
   state = {
     details: [
       {
-        availability: "Looking",
+        availability: "Open",
         email: "cjs78@hotmail.co.uk",
         mobile: "07809 758568",
         phone: "01252 641982",
