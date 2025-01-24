@@ -2420,6 +2420,7 @@ buble@^0.16.0:
 "buble@github:pemrouz/buble":
   version "0.18.0"
   resolved "git+ssh://git@github.com/pemrouz/buble.git#4e639aeeb64712ac95dc30a52750d1ee4432c9c8"
+  integrity sha512-vBjSU8v5gODqXVUvlpgEzjtSMXz2Am8Yh7O1PUZmx6DAzKWT1CrYm5azoYhAGLCWOlkd4aN6LEOCZ+dgVt2rFA==
   dependencies:
     acorn "^5.1.2"
     acorn-jsx "^3.0.1"
@@ -8217,6 +8218,11 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
+popper.js@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz"
+  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
+
 popper@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/popper/-/popper-1.0.1.tgz"
@@ -10992,6 +10998,11 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@*, "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev":
+  version "5.7.3"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-5.7.3.tgz"
+  integrity sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==
 
 uglify-js@^3.1.4, uglify-js@3.4.x:
   version "3.4.10"
