@@ -9,9 +9,9 @@ import { useRef, useEffect } from "react";
 
 export default function Home() {
 
-  const mainInputRef = useRef(null);
-
-  const handleSkipLink = (e) => {
+  const mainInputRef = useRef<HTMLInputElement>(null);
+  
+  const handleSkipLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     if (mainInputRef.current) {
       mainInputRef.current.focus();
@@ -261,7 +261,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8">
         <div className="container mx-auto px-6 text-center">
-          <p>© {new Date().getFullYear()} {config.personal.name}. All rights reserved. This website was built by me using Next.js, Tailwind and Lucide Icons.</p>
+          <p>© {new Date().getFullYear()} {config.personal.name}. All rights reserved.</p>
+          <p>{config.personal.statement}</p>
         </div>
       </footer>
     </div>

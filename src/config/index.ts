@@ -8,7 +8,8 @@ export const config = {
     cvPath: '/chris-stevens-cv-2025.pdf',
     availability: 'Currently on a contract that is coming to an end looking for new opportunities',
     highereducation: 'University of Surrey degree in English Literature 2:1 BA Hons',
-    education: '9 GCSEs 3 A Levels'
+    education: '9 GCSEs 3 A Levels',
+    statement: 'This website was built using Next.js, Tailwind, Lucide Icons and ChatGPT 4 and is Accessible to WCAG 2.1 level AA.'
   },
   about: {
     image: '/images/me2.png',
@@ -44,13 +45,13 @@ export const config = {
       company: "Croydon Council", 
       industry: "Public Sector",
       location: "London Borough of Croydon", 
-      summary: "For nearly six years, I have been a key member of Croydon Council’s Croydon Digital Service (CDS) department, where my role has evolved across a variety of projects. Initially, I helped develop a new PHP-based Drupal 8 website on an Azure DevOps platform—a system that has since been upgraded to Drupal 10. Later, I divided my time between maintaining the Croydon site and collaborating on the development of a white-label version, known as LocalGov, for distribution to other councils. This initiative has been a resounding success, with numerous councils adopting the codebase. As the sole front-end development and accessibility specialist within a multi-disciplinary Agile team working in two-week sprints, I have also partnered with the Shaw Trust to meet WCAG 2.1 AA accessibility standards. In addition, I manage a WordPress site designed to engage digital businesses across the Croydon area.",
+      summary: "For nearly six years, I have been a key member of Croydon Council’s Croydon Digital Service (CDS) department, where my role has evolved across a variety of projects. Initially, I helped develop a new PHP-based Drupal 8 website on an Azure DevOps platform - a system that has since been upgraded to Drupal 10. Later, I divided my time between maintaining the Croydon site and collaborating on the development of a white-label version, known as LocalGov, for distribution to other councils. This initiative has been a resounding success, with numerous councils adopting the codebase. As the sole front-end development and accessibility specialist within a multi-disciplinary Agile team working in two-week sprints, I have also partnered with the Shaw Trust to meet WCAG 2.1 AA accessibility standards. In addition, I manage a WordPress site designed to engage digital businesses across the Croydon area.",
       glance1: "Part of a multi disciplinary AGILE team with Trello.", 
       glance2: "Working with PHP Drupal 10 and Wordpress platforms.", 
       glance3: "Use of usual skillset of HTML5, CSS3/SASS, Bootstrap 4, Accessibility, Sublime, Javascript, Extensive Command Line, GitHub.", 
       glance4: "Working on an open collaborative project to provide a white label website solution for councils.", 
       link: "https://www.croydon.gov.uk",
-      tags: ['Drupal 10', 'Docker', 'Figma', 'NPM', 'Node.js', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['Drupal 10', 'Docker', 'Figma', 'NPM', 'Node.js', 'PHP', 'Twig', 'SASS', 'Azure', 'Javascript', 'Accessibility', 'GDS', 'GIT'],
       listlink: [
         {
           "link": "http://www.croydon.gov.uk",
@@ -72,23 +73,18 @@ export const config = {
       company: "Southampton Uni (NIHR)",
       industry: "Public Sector",
       location: "Southampton, Hampshire", 
-      summary: "I worked with the University of Southampton to help roll out a newly designed website for the NIHR (National Institute for Health Research). The work involved the production of component based assets loaded into a CMS system called SiteKit.",
+      summary: "I collaborated with the University of Southampton to support the rollout of a newly designed website for the NIHR (National Institute for Health Research). My role involved creating component-based assets and integrating them into a CMS platform called SiteKit. Key responsibilities included building cross-browser, multi-device, and WCAG 2.1-compliant accessible webpages from Photoshop designs. I utilized a diverse skillset, including HTML5, native JavaScript, jQuery, Bootstrap 4, CSS3, Photoshop, InVision, CSS animations (including GSAP), Git, Bitbucket, and Sublime Text, while adhering to mobile-first and responsive design principles. Working within a collaborative team environment, I liaised closely with designers and developers to ensure seamless project execution and delivery.",
       glance1: "Build cross browser and multi device Accessible webpages from supplied designs in Photoshop format.", 
       glance2: "Working with a CMS platform called ‘Site Kit’ with a focus on WCAG 2.1 Accessibility.", 
       glance3: "Use main skillset of HTML5 / Native Javascript / JQuery / Bootstrap 4 / CSS3 / Photoshop / Invision / CSS Animations inc GSAP / GIT / Bitbucket / Sublime / Mobile First / Responsive", 
       glance4: "Working in a team environment, liaising with designers and developers.", 
       link: "https://www.nihr.ac.uk/",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['SiteKit', 'CMS', 'Accessibility', 'GDS', 'CSS3', 'SASS', 'Javascript ES6', 'JQuery', 'Figma', 'Photoshop', 'GitHub'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "https://www.nihr.ac.uk/",
+          "name": "NIHR Website",
           "source": "external"
-        },
-        {
-          "link": "#",
-          "name": "Internal Example",
-          "source": "internal"
         }
       ],
       image: "nihr"
@@ -100,17 +96,17 @@ export const config = {
       company: "Gallagher Communication",
       industry: "Agency",
       location: "Liphook, Hampshire", 
-      summary: "Gallagher Communication are a global communications agency based in Liphook, Hampshire. They work with clients such as Husqvarna, Nike, BMW, Newfield, Lifepoint, Penske and AXA to manage their employee communications and benefits. The service I supplied to Gallagher was varied and included the production of stand alone ‘React / Bootstrap 4’ websites, Angular JS ‘core’ based 'Benefit Brochure' sites and HTML email campaigns.", 
+      summary: "Gallagher Communications is a global communications agency based in Liphook, Hampshire, serving high-profile clients such as Husqvarna, Nike, BMW, Newfield, Lifepoint, Penske, and AXA to manage their employee communications and benefits. My role involved delivering a variety of services, including the development of standalone React and Bootstrap 4 websites, Angular JS-based 'Benefit Brochure' sites using their proprietary ‘Core’ platform, and HTML email campaigns. I built cross-browser, multi-device, and accessible websites from designs provided in Photoshop, Sketch, and InVision formats. Additionally, I produced HTML emails using Mailchimp and tested them in Litmus. My technical skillset included HTML, CSS, SASS, JavaScript, React, Angular JS, GRUNT, NPM, Bower, Git, Bitbucket, Sublime Text, CSS animations, Greensock GSAP, and ScrollMagic. Working within a Scrum team environment, I collaborated closely with designers and backend developers to ensure high-quality deliverables.", 
       glance1: "Build cross browser and multi device Accessible websites from supplied designs in Photoshop, Sketch and InVision formats.", 
       glance2: "Working with a bespoke Angular JS based platform known as ‘Core’. HTML email production using Mailchimp and tested in Litmus.", 
       glance3: "Use main skillset of HTML / CSS / SASS / Javascript / React / Angular JS / GRUNT / NPM / Bower / GIT / Bitbucket / Sublime / CSS Animation / Greensock GSAP / ScrollMagic", 
       glance4: "Working in a scrum team environment, liaising with designers and backend devs.", 
       link: "https://gallaghercommunication.com",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['React', 'Angular', 'Javascript', 'SASS', 'NPM', 'Litmus', 'GSAP', 'Mailchimp', 'Accessibility', 'WCAG'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "https://gallaghercommunication.com",
+          "name": "Gallagher Communication",
           "source": "external"
         },
         {
@@ -119,7 +115,7 @@ export const config = {
           "source": "internal"
         }
       ],
-      image: "newfieldbenefits"
+      image: "gallagher"
     },
     { 
       startdate: "April 2018", 
@@ -128,26 +124,21 @@ export const config = {
       company: "Jaywing Ltd",
       industry: "Agency",
       location: "Newbury, Berkshire", 
-      summary: "Jaywing are a full service agency based in Newbury, Berkshire. I worked with them on a new website build for the University of Portsmouth. This was not my first foray into the university sector, having been a part of the project for Sheffield Hallam University a few years back. The site is based on the Sitecore platform and uses Jaywing's bespoke front end framework called 'Atomic' which is loosely based on Foundation.", 
+      summary: "Jaywing is a full-service agency based in Newbury, Berkshire. I worked with them on a new website build for the University of Portsmouth. The website was developed on the Microsoft Sitecore platform, utilizing Jaywing's bespoke front-end framework called 'Atomic,' which is loosely based on 'Foundation'. My responsibilities included component integration and customisation within Sitecore's Experience Editor, as well as working with tools such as MS Visual Studio 2017, MS Visual Studio Code (VSCode), Git, Yarn Package Manager, Node, Nunjucks, Webpack, Babel, SASS, and JS Lint. I ensured WCAG accessibility compliance and employed a mobile-first, responsive grid approach using CSS3 (SASS) and the Atomic framework. The project involved modular vanilla JavaScript (similar to Require.js with some ES6) and component-based HTML5 templating via Nunjucks. I worked from designs provided in Adobe XD CC and managed tasks using Jira tickets within an Agile Scrum environment, participating in daily standups and iterative development cycles.", 
       glance1: "MS Visual Studio 2017 and MS Visual Studio Code (VSCode)", 
       glance2: "Sitecore - including component integration and customisation of the experience editor.", 
       glance3: "GIT, Yarn Package Manager, Node, Webpack, Babel, SASS and JS Lint", 
       glance4: "WCAG Accessibility, CSS3 - SASS, Atomic (Foundation), Responsive Grid Mobile First Approach Javascript - Custom Modular Vanilla JS - Similar to Require.js with some ES6 HTML5 - component based with templating via Nunjucks Designs - working from designs provided in Adobe XD CC Project management - Jira Tickets, Agile, Scrum, Daily Standups", 
       link: "https://www.port.ac.uk/",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['Sitecore', '.Net', 'Nunjucks', 'Adobe XD', 'Jira', 'GIT', 'SASS', 'Javascript'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "https://www.port.ac.uk/",
+          "name": "University of Portsmouth",
           "source": "external"
-        },
-        {
-          "link": "#",
-          "name": "Internal Example",
-          "source": "internal"
         }
       ],
-      image: "universityofportsmouth"
+      image: "jaywing"
     },
     {
       startdate: "March 2018", 
@@ -185,7 +176,7 @@ export const config = {
       glance3: "Working in an Agile team with Drupal devs, testers, PM's, UX designers", 
       glance4: "Large scale high traffic websites",
       link: "https://www.classicandsportscar.com/",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['Drupal', 'Vagrant', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
       listlink: [ 
         {
           "link": "https://www.classicandsportscar.com",
@@ -207,24 +198,19 @@ export const config = {
       company: "Supermassive Games",
       industry: "Computer games",
       location: "Guildford, Surrey", 
-      summary: "Supermassive Games have produced some leading games for the Sony label including Until Dawn, Little Big Planet and Killzone. I worked in a game development team as the sole UI resource. During my time there I worked on three new games <a href='https://www.playstation.com/en-gb/games/hidden-agenda-ps4/' target='_blank' rel='noopener noreferrer'>Hidden Agenda</a> (playlink), <a href='https://www.playstation.com/en-gb/games/the-inpatient-ps4/' target='_blank' rel='noopener noreferrer'>The Inpatient</a> (VR) and <a href='https://www.playstation.com/en-gb/games/bravo-team-ps4/' target='_blank' rel='noopener noreferrer'>Bravo Team</a> (VR). I used a UI system called Coherent UI to create complex interactive in-game UI components using HTML5, CSS3 animations, SASS and Javascript. This assignment was a very enjoyable learning curve and the change of industry and challenges presented by working in Unreal Engine 4 and Coherent UI proved that I can port my core skillset to the most unlikely of environments.", 
+      summary: "This role was a huge departure from the 'norm'.. a challenge I just knew would above all else be great fun! Supermassive Games, renowned for producing leading titles such as Until Dawn, Little Big Planet, and Killzone for Sony, brought me on as the sole UI resource within their game development team. During my time there, I contributed to three new games: Hidden Agenda (PlayLink), The Inpatient (VR), and Bravo Team (VR). I utilized Coherent UI, a specialized system, to design and implement complex, interactive in-game UI components using HTML5, CSS3 animations, SASS, and JavaScript. This role was a rewarding learning experience, as it required adapting my web development expertise to a C++ Unreal Engine 4 environment and navigating the unique challenges of game development. I gained proficiency in Perforce for source control, PS4 development workflows, and launching and testing on console platforms. Additionally, I worked within a highly confidential environment, ensuring the security and integrity of sensitive project details. This assignment demonstrated my ability to transfer my core skillset to diverse and unconventional environments, further solidifying my versatility as a developer.", 
       glance1: "Adapt web development skills to working in a C++ Unreal Engine 4 environment Coherent UI – understanding its limitations and working around issues", 
       glance2: "HTML5 Javascript and JQuery Pre-processed CSS3 using SASS CSS3 animations and transitions", 
       glance3: "Perforce source control PS4 development launching and testing", 
       glance4: "Working in a highly confidential environment", 
       link: "https://www.supermassivegames.com/",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['C++', 'Unreal Engine 4', 'Coherent UI', 'Perforce', 'Javascript', 'JQUERY', 'CSS Animation', 'PS4'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "https://www.supermassivegames.com/",
+          "name": "Supermassive Games",
           "source": "external"
         },
-        {
-          "link": "#",
-          "name": "Internal Example",
-          "source": "internal"
-        }
       ],
       image: "supermassive"
     },
@@ -241,17 +227,12 @@ export const config = {
       glance3: "", 
       glance4: "", 
       link: "http://www.cignawellbeing.com",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['.Net', 'SASS', 'Javascript', 'HTML5', 'CSS3', 'Bootstrap', 'NPM', 'Multi Lingual', 'TFS'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "http://www.cignawellbeing.com",
+          "name": "Cigna Wellbeing",
           "source": "external"
-        },
-        {
-          "link": "#",
-          "name": "Internal Example",
-          "source": "internal"
         }
       ],
       image: "cigna"
@@ -260,26 +241,26 @@ export const config = {
       startdate: "December 2015", 
       enddate: "August 2016", 
       jobtitle: "Front End Web Developer",
-      company: "Pharmiweb Solutions",
+      company: "Pharmiweb (Huumun)",
       industry: "Pharmaceutical",
       location: "Bracknell, Berkshire", 
-      summary: "Pharmiweb Solutions are a web agency providing bespoke solutions to the Pharmaceutical sector. They work with companies such as GSK, ViiV Healthcare, Bristol-Myers Squibb and Nutricia. I worked within a close Agile team using a JIRA ticket system. I worked primarily on iPad only Javascript heavy presentations known as DVA's (Digital Visual Aids). I also built HTML emails which were loaded into a custom mail out tool and tested using Litmus and Putsmail.", 
+      summary: "Pharmiweb Solutions (now known as Huuman) are a web agency providing bespoke solutions to the Pharmaceutical sector. They work with companies such as GSK, ViiV Healthcare, Bristol-Myers Squibb and Nutricia. I worked within a close Agile team using a JIRA ticket system. I worked primarily on iPad only Javascript heavy presentations known as DVA's (Digital Visual Aids). I also built HTML emails which were loaded into a custom mail out tool and tested using Litmus and Putsmail.", 
       glance1: "HTML5 using Modernizr for feature detection &amp; polyfills. Pre-processed CSS3 using SASS - Accessibility", 
       glance2: "Use of an in-house custom set of Javascript functions.", 
       glance3: "Heavy usage and data manipulation of SVG files", 
       glance4: "JSLint and CSSLint and GRUNT Taskrunner.", 
-      link: "https://www.pharmiwebsolutions.com",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      link: "https://huumun.com/",
+      tags: ['Javascript', 'SASS', 'NPM', 'HTML5', 'CSS3', 'Accessibility', 'Putsmail', 'Litmus'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "https://huumun.com/",
+          "name": "Huuman website",
           "source": "external"
         },
         {
-          "link": "#",
-          "name": "Internal Example",
-          "source": "internal"
+          "link": "https://www.nutricia.com/",
+          "name": "Nutricia website",
+          "source": "external"
         }
       ],
       image: "pharmiweb"
@@ -297,17 +278,12 @@ export const config = {
       glance3: "Bootstrap, Photoshop ,Chrome Dev Tools, Responsive", 
       glance4: "GIT, GRUNT, Source Tree, Yeoman, Bower", 
       link: "https://www.agent3.com/",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['HTML5', 'CSS3', 'JQuery', 'Bower', 'Source Tree', 'GRUNT', 'Javascript'],
       listlink: [ 
         {
-          "link": "https://github.com/localgovdrupal/localgov_base_croydon",
-          "name": "LocalGov Drupal",
+          "link": "https://www.agent3.com/",
+          "name": "Agent 3",
           "source": "external"
-        },
-        {
-          "link": "#",
-          "name": "Internal Example",
-          "source": "internal"
         }
       ],
       image: "agent3"
@@ -325,7 +301,7 @@ export const config = {
       glance3: "", 
       glance4: "", 
       link: "https://www.shu.ac.uk",
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      tags: ['Sitecore', 'JQuery', 'SASS', 'GIT', 'Grunt', 'Bourbon', 'Neat', 'Javascript'],
       listlink: [ 
         {
           "link": "https://github.com/localgovdrupal/localgov_base_croydon",
@@ -428,10 +404,10 @@ export const config = {
       startdate: "August 2011", 
       enddate: "February 2015", 
       jobtitle: "Front End Web Developer", 
-      company: "O2 Telefonica",
+      company: "O2 Telefónica",
       industry: "Telecoms",
       location: "Slough, Berkshire", 
-      summary: "I was originally contracted to <strong>O2 Telefónica</strong> in Slough in 2011, tasked with the UI development on their new Business Shop. I then moved onto various other projects such as iPhone releases, the 4G product release, an in-store fast track upgrade system and two SMB customer portals. In early 2014 the business shop was over-hauled with a series of new interfaces and a re-designed product builder and I handled the front end development work on the project. The business shop runs on the cloud based ‘SalesForce’ platform and I worked with both in-house and off shore development teams. I used skills in ‘Apex’ Code, hand coded HTML5, CSS3, SASS, Native JavaScript, JQuery, JSON, XML, Photoshop, SVN &amp; Jira.", 
+      summary: "I was originally contracted to O2 Telefónica in Slough in 2011, tasked with the UI development on their new Business Shop. I then moved onto various other projects such as iPhone releases, the 4G product release, an in-store fast track upgrade system and two SMB customer portals. In early 2014 the business shop was over-hauled with a series of new interfaces and a re-designed product builder and I handled the front end development work on the project. The business shop runs on the cloud based ‘SalesForce’ platform and I worked with both in-house and off shore development teams. I used skills in ‘Apex’ Code, hand coded HTML5, CSS3, SASS, Native JavaScript, JQuery, JSON, XML, Photoshop, SVN &amp; Jira.", 
       glance1: "", 
       glance2: "", 
       glance3: "", 
@@ -463,7 +439,7 @@ export const config = {
     {
       title: '3 Chillies',
       description: 'Re-design for Odgers Berndtson. Component creation for Sitecore integration.',
-      image: '/images/chillies-screenshot.png',
+      image: '/images/chillies-screenshot.jpg',
       tags: ['Sitecore', 'SASS', 'HTML5', 'Javascript', 'JQuery', 'Node', 'WCAG', 'Figma']
     },
     {
@@ -479,7 +455,7 @@ export const config = {
     projects: [
       {
         title: 'Svelte - Markdown Editor',
-        description: 'Playiing around with Svelte and experimenting with two way binding and reactive statements.',
+        description: 'Playing around with Svelte and experimenting with two way binding and reactive statements.',
         date: 'Feb 2025',
         tags: ['Svelte', 'NPM', 'Javascript'],
         demoUrl: '#',
@@ -499,7 +475,7 @@ export const config = {
         title: 'Square Metre Calculator',
         description: 'I often need to work out the square meterage of materials and suchlike so thought I would make my own calculator',
         date: 'Dec 2024',
-        tags: ['Natve Javascript', 'HeroIcons', 'Tailwind'],
+        tags: ['Native Javascript', 'HeroIcons', 'Tailwind'],
         demoUrl: '#',
         codeUrl: '#',
         image: '/images/squaremetre-screenshot.png'
