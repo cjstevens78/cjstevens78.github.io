@@ -1,12 +1,16 @@
 "use client";
 
-import { forwardRef, useState, useRef } from "react";
+import { forwardRef, useState, useRef, LegacyRef, RefObject } from "react";
 import { config } from "@/config"; // Import structured resume data
 import { Bot } from "lucide-react";
 
-const ResumeAssistant = forwardRef((props, ref) => {
+interface ResumeAssistantProps {
+  // Define any props if needed
+}
+
+const ResumeAssistant = forwardRef<HTMLInputElement, ResumeAssistantProps>((props, ref) => {
   // Use the forwarded ref if available; otherwise, create a local one.
-  const inputRef = ref || useRef(null);
+  const inputRef = ref || useRef<HTMLInputElement>(null);
 
   const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY || ""; // Secure API key access
 
@@ -88,7 +92,7 @@ const ResumeAssistant = forwardRef((props, ref) => {
         <input
           className="flex-1 border p-2 rounded-l-lg ask-questions"
           value={input}
-          ref={inputRef}
+          ref={inputRef as LegacyRef<HTMLInputElement>}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="Ask a question..."
