@@ -1,6 +1,6 @@
 # Next.js Portfolio for Chris Stevens
 
-This is a portfolio website designed to showcase my work history and ability to prospective clients. Highlghts include a Resume Assistant using ChatGPT and a Discord webhook used to track visits.
+This is a portfolio website designed to showcase my work history and ability to prospective clients. Highlights include a Resume Assistant using ChatGPT and a Discord webhook used to track visits.
 
 ## Table of Contents
 
