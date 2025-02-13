@@ -1,22 +1,17 @@
 "use client";
 
-import { forwardRef, useState, useRef, LegacyRef, RefObject } from "react";
-import { config } from "@/config"; // Import structured resume data
+import { forwardRef, useState, useRef, useEffect, LegacyRef } from "react";
+import { config } from "@/config";
 import { Bot } from "lucide-react";
 
-interface ResumeAssistantProps {
-  // Define any props if needed
-}
-
-const ResumeAssistant = forwardRef<HTMLInputElement, ResumeAssistantProps>((props, ref) => {
-  // Use the forwarded ref if available; otherwise, create a local one.
+const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
   const inputRef = ref || useRef<HTMLInputElement>(null);
-
-  const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY || ""; // Secure API key access
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+  const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY || "";
 
   const systemMessage = {
     role: "system",
-    content: `You are an AI assistant that answers questions based on Chris Stevens' resume. Here is the resume data: ${JSON.stringify(config)}`
+    content: `You are an AI assistant that answers questions based on Chris Stevens' resume. Limit your response to 50 words. Here is the resume data: ${JSON.stringify(config)}`
   };
 
   const [messages, setMessages] = useState([
@@ -47,8 +42,8 @@ const ResumeAssistant = forwardRef<HTMLInputElement, ResumeAssistantProps>((prop
         },
         body: JSON.stringify({
           model: "gpt-4-1106-preview",
-          messages: [systemMessage, ...newMessages], // System message included but not displayed
-          max_tokens: 200
+          messages: [systemMessage, ...newMessages],
+          max_tokens: 50
         })
       });
 
@@ -64,44 +59,54 @@ const ResumeAssistant = forwardRef<HTMLInputElement, ResumeAssistantProps>((prop
     setLoading(false);
   };
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      sendMessage();
-    }
-  };
+  useEffect(() => {
+    if (!chatContainerRef.current) return;
+
+    setTimeout(() => {
+      const chatContainer = chatContainerRef.current;
+      if (!chatContainer) return; 
+
+      const messageElements = Array.from(chatContainer.children).filter(
+        (child) => !(child as HTMLElement).classList.contains("italic")
+      );
+      const lastMessageElement = messageElements[messageElements.length - 1];
+
+      if (lastMessageElement) {
+        const lastMessageTop = (lastMessageElement as HTMLElement).offsetTop;
+        const lastMessageHeight = (lastMessageElement as HTMLElement).clientHeight;
+        const chatContainerHeight = chatContainer.clientHeight;
+
+        if (lastMessageHeight > chatContainerHeight) {
+          chatContainer.scrollTop = lastMessageTop;
+        } else {
+          chatContainer.scrollTop = lastMessageTop + lastMessageHeight - chatContainerHeight;
+        }
+      }
+    }, 0);
+  }, [messages]);
 
   return (
     <div className="max-w-md p-4 border rounded-lg shadow-lg bg-white text-black">
-      <div className="h-64 overflow-y-auto p-2 border-b">
+      <div ref={chatContainerRef} className="h-64 overflow-y-auto p-2 border-b">
         {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`my-2 ${msg.role === "user" ? "text-right" : "text-left"}`}
-          >
-            <p
-              className={`${
-                msg.role === "user" ? "bg-blue-200" : "bg-gray-200"
-              } p-2 rounded-lg inline-block`}
-            >
+          <div key={index} className={`my-2 ${msg.role === "user" ? "text-right" : "text-left"}`}>
+            <p className={`${msg.role === "user" ? "bg-blue-200" : "bg-gray-200"} p-2 rounded-lg inline-block`}>
               {msg.content}
             </p>
           </div>
         ))}
+        {loading && <p className="text-gray-500 italic">Hold tight - thinking...</p>}
       </div>
       <div className="mt-2 flex">
         <input
-          className="flex-1 border p-2 rounded-l-lg ask-questions"
+          className="flex-1 border p-2 rounded-l-lg"
           value={input}
           ref={inputRef as LegacyRef<HTMLInputElement>}
           onChange={(e) => setInput(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyPress={(event) => event.key === "Enter" && sendMessage()}
           placeholder="Ask a question..."
         />
-        <button
-          className="bg-blue-600 text-white px-4 py-2 rounded-r-lg"
-          onClick={sendMessage}
-          disabled={loading}
-        >
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-r-lg" onClick={sendMessage} disabled={loading}>
           {loading ? "..." : "Send"}
         </button>
       </div>
