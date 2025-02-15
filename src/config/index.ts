@@ -3,7 +3,7 @@ export const config = {
     name: 'Chris Stevens',
     role: 'Front End Web Developer & Web Accessibility Specialist',
     email: 'cjs78@hotmail.co.uk',
-    github: 'https://github.com/cjstevens78',
+    github: 'https://github.com/cjstevens78/cjstevens78.github.io',
     linkedin: 'https://www.linkedin.com/in/chris-stevens-50b07913/',
     cvPath: '/chris-stevens-cv-2025.pdf',
     availability: 'Currently on a contract that is coming to an end looking for new opportunities',

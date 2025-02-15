@@ -86,7 +86,7 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
   }, [messages]);
 
   return (
-    <div className="max-w-md p-4 border rounded-lg shadow-lg bg-white text-black">
+    <div className="w-full p-4 border rounded-lg shadow-lg bg-white text-black">
       <div ref={chatContainerRef} className="h-64 overflow-y-auto p-2 border-b">
         {messages.map((msg, index) => (
           <div key={index} className={`my-2 ${msg.role === "user" ? "text-right" : "text-left"}`}>
