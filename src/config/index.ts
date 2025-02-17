@@ -432,19 +432,19 @@ export const config = {
   projects: [
     {
       title: 'Walgreens Boots Alliance',
-      description: 'A Java based customer portal with primary focus on Accessibility.',
+      description: 'I worked with Proventeq and Tata Consulting. I was the sole Accessibility Specialist on a large-scale promotional offer system for Walgreens Boots Alliance (Boots.com).  Working remotely with a UK/India team, I ensured WCAG 2.1 AAA compliance for this Java (JSP)/Liferay portal (Azure DevOps) by performing ongoing accessibility reviews (using Siteimprove, AXE, NVDA, Voiceover, and manual testing) and delivering compliance reports.  My role also included front-end development, focusing on complex JavaScript/TypeScript form interactions and single-page applications based on Figma designs.  I participated in daily standups, ticket management, and other team activities.',
       image: '/images/walgreens-screenshot.jpg',
-      tags: ['Liferay', 'Java', 'React', 'API', 'WCAG', 'ARIA', 'Screenreader', 'AXE', 'Javascript']
+      tags: ['Liferay', 'Eclipse', 'JSP', 'HTML5', 'CSS3', 'SASS', 'ES6 JavaScript & Typescript', 'jQuery', 'Azure DevOps (Ticketing, Pipelines etc)', 'GIT/GitHub', 'NPM', 'Node', 'Gulp', 'Visual Studio Code', 'Figma', 'WCAG 2.1 Accessibility Guidelines', 'Responsive Design', 'NVDA', 'AXE', 'Siteimprove', 'VoiceOver']
     },
     {
       title: '3 Chillies',
-      description: 'Re-design for Odgers Berndtson. Component creation for Sitecore integration.',
+      description: 'At 3Chillies, a Microsoft-focused agency specializing in Umbraco and Sitecore for the finance sector, I developed front-end HTML templates for a new website for Odgers Berndtson (odgersberndtson.com).  Working from third-party Figma designs and wireframes, I collaborated with designers and Sitecore developers to create pixel-perfect, responsive pages and components using HTML, CSS3, SASS, JavaScript, and jQuery. Using Azure DevOps, I participated in daily standups and managed my assigned tickets.',
       image: '/images/chillies-screenshot.jpg',
       tags: ['Sitecore', 'SASS', 'HTML5', 'Javascript', 'JQuery', 'Node', 'WCAG', 'Figma']
     },
     {
       title: 'Veolia',
-      description: 'A Drupal based customer portal. Twig templating and Component creation.',
+      description: 'Veolia are a large waste management services company. They were interested in bringing me on board due to my Drupal Front End experience. I worked in an agile team alongside a Drupal back end dev and a UX designer to implement complex new screens into their backend system that was used for setting up delivery and facilities tracking.',
       image: '/images/veolia-screenshot.png',
       tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript']
     }
@@ -458,7 +458,7 @@ export const config = {
         description: 'Playing around with Svelte and experimenting with two way binding and reactive statements.',
         date: 'Feb 2025',
         tags: ['Svelte', 'NPM', 'Javascript'],
-        demoUrl: '#',
+        demoUrl: '/playground',
         codeUrl: '#',
         image: '/images/svelte-screenshot.png'
       },
@@ -467,7 +467,7 @@ export const config = {
         description: 'Hello Big Brother here - How I track your movements on my website via notifications to a Discord server.',
         date: 'Jan 2025',
         tags: ['Next.js', 'Typescript', 'API'],
-        demoUrl: '#',
+        demoUrl: '/playground',
         codeUrl: '#',
         image: '/images/discord-screenshot.png'
       },
@@ -476,7 +476,7 @@ export const config = {
         description: 'I often need to work out the square meterage of materials and suchlike so thought I would make my own calculator',
         date: 'Dec 2024',
         tags: ['Native Javascript', 'HeroIcons', 'Tailwind'],
-        demoUrl: '#',
+        demoUrl: '/playground',
         codeUrl: '#',
         image: '/images/squaremetre-screenshot.png'
       }

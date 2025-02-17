@@ -99,7 +99,7 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
       </div>
       <div className="mt-2 flex">
         <input
-          className="flex-1 border p-2 rounded-l-lg"
+          className="w-full flex-1 border p-2 rounded-l-lg"
           value={input}
           ref={inputRef as LegacyRef<HTMLInputElement>}
           onChange={(e) => setInput(e.target.value)}

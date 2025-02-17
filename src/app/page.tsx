@@ -6,6 +6,7 @@ import { config } from '@/config'
 import ResumeAssistant from '../components/ResumeAssistant';
 import ContractsDisplay from '../components/ContractsDisplay';
 import { useRef, useEffect } from "react";
+import Footer from '../components/Footer';
 
 export default function Home() {
 
@@ -259,12 +260,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p>© {new Date().getFullYear()} {config.personal.name}. All rights reserved.</p>
-          <p>{config.personal.statement}</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
