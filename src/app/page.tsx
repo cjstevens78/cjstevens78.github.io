@@ -1,64 +1,65 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Github, Linkedin, Mail, FileText, ExternalLink, Code, Headset, Bot } from 'lucide-react';
-import { config } from '@/config'
+import { config } from '@/config';
 import ResumeAssistant from '../components/ResumeAssistant';
 import ContractsDisplay from '../components/ContractsDisplay';
+import ProjectsDisplay from '../components/ProjectsDisplay';
 import { useRef, useEffect } from "react";
+import Footer from '../components/Footer';
+import BlogSection from '../components/BlogSection';
 
 export default function Home() {
 
   const mainInputRef = useRef<HTMLInputElement>(null);
-  
-  const handleSkipLink = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+
+  const handleSkipLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
     if (mainInputRef.current) {
       mainInputRef.current.focus();
     }
   };
 
-    useEffect(() => {
-      fetch("/api/discordWebhook", {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-              event: "Page Visit",
-              details: `User visited the website at ${new Date().toLocaleString()}`,
-          }),
-      }).catch((err) => console.error("Error sending webhook:", err));
+  useEffect(() => {
+    fetch("/api/discordWebhook", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        event: "Page Visit",
+        details: `User visited the website at ${new Date().toLocaleString()}`,
+      }),
+    }).catch((error) => console.error("Error sending webhook:", error));
   }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
-    <a
+      <a
         href="#main"
         onClick={handleSkipLink}
         className="absolute left-0 top-[-100px] focus:top-0 transition-all duration-300 bg-white text-black p-2 z-50"
       >
         Skip to main content
       </a>
-      {/* Header/Hero Section */}
-        <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+
+      <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-6 py-24 w-full">
           <div className="row flex flex-col md:flex-row md:justify-between">
             <div className="w-full md:w-1/2">
-            <img src="/images/me.png" alt="Profile Picture" className="w-36 mb-4 rounded-lg object-cover" />
+              <img src="/images/me.png" alt="Profile Picture" className="w-36 mb-4 rounded-lg object-cover" />
               <h1 className="text-5xl font-bold mb-4">{config.personal.name}</h1>
               <p className="text-xl mb-8">{config.personal.role}</p>
               <div className="flex space-x-4 my-2 items-center">
-                <a href={config.personal.github} 
-                   className="p-2 hover:bg-blue-700 rounded-full transition-colors" title="See my repo on github">
+                <a href={config.personal.github} className="p-2 hover:bg-blue-700 rounded-full transition-colors" title="See my repo on github">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href={`mailto:${config.personal.email}`} 
-                   className="p-2 hover:bg-blue-700 rounded-full transition-colors" title="Send me an email">
+                <a href={`mailto:${config.personal.email}`} className="p-2 hover:bg-blue-700 rounded-full transition-colors" title="Send me an email">
                   <Mail className="w-6 h-6" />
                 </a>
-                <a href={'https://wa.me/07809758568'} 
-                   className="p-2 hover:bg-blue-700 rounded-full transition-colors" title="Talk with me on whatsapp">
+                <a href={'https://wa.me/07809758568'} className="p-2 hover:bg-blue-700 rounded-full transition-colors" title="Talk with me on whatsapp">
                   <Headset className="w-6 h-6" />
                 </a>
                 <p className="flex items-center gap-2"><strong>Phone: 07809 758568</strong></p>
@@ -71,13 +72,12 @@ export default function Home() {
         </div>
       </header>
 
-      {/* About Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] w-full">
-              <Image 
+              <Image
                 src={config.about.image}
                 alt={config.about.imageAlt}
                 fill
@@ -91,7 +91,7 @@ export default function Home() {
                 <p key={index} className="text-gray-600">{paragraph}</p>
               ))}
               <div className="pt-4">
-                <a 
+                <a
                   href={config.personal.cvPath}
                   className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
                 >
@@ -104,13 +104,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section className="bg-white py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12">Technical Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {config.skills.map((skill) => (
-              <div 
+              <div
                 key={skill}
                 className="p-4 bg-gray-50 rounded-lg text-center hover:shadow-md transition-shadow"
               >
@@ -120,51 +119,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Contracts Section */}
       <section className="py-20">
         <ContractsDisplay />
       </section>
-
       {/* Projects Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {config.projects.map((project, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative h-48">
-                  <Image 
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span 
-                        key={tagIndex}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProjectsDisplay />
       </section>
-
+      {/* Blog Section */}
+      <section className="py-20">
+        <BlogSection />
+      </section>
       {/* Playground Section */}
       <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
         <div className="container mx-auto px-6">
@@ -227,7 +193,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="bg-gray-900 text-white py-20">
         <div className="container mx-auto px-6">
@@ -259,12 +224,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p>© {new Date().getFullYear()} {config.personal.name}. All rights reserved.</p>
-          <p>{config.personal.statement}</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

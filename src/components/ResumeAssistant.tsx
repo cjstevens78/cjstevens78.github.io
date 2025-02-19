@@ -86,7 +86,7 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
   }, [messages]);
 
   return (
-    <div className="max-w-md p-4 border rounded-lg shadow-lg bg-white text-black">
+    <div className="w-full p-4 border rounded-lg shadow-lg bg-white text-black">
       <div ref={chatContainerRef} className="h-64 overflow-y-auto p-2 border-b">
         {messages.map((msg, index) => (
           <div key={index} className={`my-2 ${msg.role === "user" ? "text-right" : "text-left"}`}>
@@ -99,7 +99,7 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
       </div>
       <div className="mt-2 flex">
         <input
-          className="flex-1 border p-2 rounded-l-lg"
+          className="w-full flex-1 border p-2 rounded-l-lg"
           value={input}
           ref={inputRef as LegacyRef<HTMLInputElement>}
           onChange={(e) => setInput(e.target.value)}
