@@ -5,9 +5,8 @@ import { useEffect, useState } from 'react';
 
 export default function BlogPost() {
   const router = useRouter();
-  const [post, setPost] = useState<null | BlogPostType>(null); // Type the state
+  const [post, setPost] = useState<null | BlogPostType>(null);
 
-  // Define the BlogPostType (replace with your actual type)
   type BlogPostType = {
     title: string;
     slug: string;
@@ -22,7 +21,7 @@ export default function BlogPost() {
     if (router.isReady) {
       const { slug } = router.query;
       const foundPost = blogPosts.find((p) => p.slug === slug);
-      setPost(foundPost || null); // Handle the undefined case
+      setPost(foundPost || null);
     }
   }, [router.isReady, router.query]);
 

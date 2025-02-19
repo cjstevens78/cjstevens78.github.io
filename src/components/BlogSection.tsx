@@ -1,13 +1,23 @@
 import { blogPosts } from '@/config/blog';
-
 import Link from 'next/link';
 
-export default function BlogSection() {
+type BlogPostType = {
+  title: string;
+  slug: string;
+  date: string;
+  author?: string;
+  tags: string[];
+  content: ({ type: string; text: string; } | { type: string; items: string[]; })[];
+};
 
-  const recentPosts = blogPosts
+function isParagraph(item: { type: string; text?: string; items?: string[] }): item is { type: string; text: string } {
+  return item.type === 'paragraph' && typeof item.text === 'string';
+}
+
+export default function BlogSection() {
+  const recentPosts = (blogPosts as BlogPostType[])
     ?.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     ?.slice(0, 3) || [];
-
 
   return (
     <section className="py-20">
@@ -16,7 +26,7 @@ export default function BlogSection() {
 
         {recentPosts.length > 0 ? (
           <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-            {recentPosts.map((post) => (
+            {recentPosts.map((post: BlogPostType) => (
               <div
                 key={post.slug}
                 className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
@@ -28,7 +38,7 @@ export default function BlogSection() {
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    {post.content.find((item) => item.type === 'paragraph')?.text.slice(0, 150)}...
+                    {post.content.find(isParagraph)?.text?.slice(0, 150) ?? ''}...
                   </p>
                   <div className="flex flex-wrap gap-2 mb-2">
                     {post.tags.map((tag) => (
