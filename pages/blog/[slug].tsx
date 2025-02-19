@@ -1,12 +1,34 @@
 import { blogPosts } from '@/config/blog';
 import { useRouter } from 'next/router';
 import Layout from '../../src/components/Layout';
+import { useEffect, useState } from 'react';
 
 export default function BlogPost() {
   const router = useRouter();
-  const { slug } = router.query;
+  const [post, setPost] = useState<null | BlogPostType>(null); // Type the state
 
-  const post = blogPosts.find((p) => p.slug === slug);
+  // Define the BlogPostType (replace with your actual type)
+  type BlogPostType = {
+    title: string;
+    slug: string;
+    date: string;
+    author?: string;
+    tags: string[];
+    content: ({ type: string; text: string; items?: undefined; } | { type: string; items: string[]; text?: undefined; })[];
+  };
+
+
+  useEffect(() => {
+    if (router.isReady) {
+      const { slug } = router.query;
+      const foundPost = blogPosts.find((p) => p.slug === slug);
+      setPost(foundPost || null); // Handle the undefined case
+    }
+  }, [router.isReady, router.query]);
+
+  if (!router.isReady) {
+    return <div>Loading...</div>;
+  }
 
   if (!post) {
     return <div>Post not found</div>;
@@ -25,18 +47,17 @@ export default function BlogPost() {
               case 'list':
                 return (
                   <ul key={index} className="list-disc ml-6 mb-4">
-                    {item.items.map((listItem, listItemIndex) => (
+                    {item.items?.map((listItem, listItemIndex) => (
                       <li key={listItemIndex}>{listItem}</li>
-                    ))}
+                    )) ?? null}
                   </ul>
                 );
-              // ... handle other content types
               default:
                 return null;
             }
           })}
         </div>
       </div>
-    </ Layout>
+    </Layout>
   );
 }
