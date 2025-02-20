@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import ContractLinks from "./ListLink"; // Assuming this is still needed for other link types
+import ContractLinks from "./ListLink";
 import { config } from "@/config";
 
-// Interface definitions (same as ContractsDisplay, but adjusted for project data)
 interface ListLink {
   link: string;
   name: string;
@@ -10,11 +9,11 @@ interface ListLink {
 }
 
 interface Project {
-  title: string; // Title is now required
-  description: string; // Description is now required
-  image: string; // Image is now required
+  title: string;
+  description: string;
+  image: string;
   tags: string[];
-  listlink?: ListLink[]; // listlink is now optional
+  listlink?: ListLink[];
 }
 
 interface ProjectCardProps {
@@ -50,24 +49,24 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     if (el) {
       setShowFade(el.scrollHeight > el.clientHeight);
     }
-  }, [project.description]); // Use project.description for the dependency
+  }, [project.description]);
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
       <img
-        src={project.image} // Directly use the image path
-        alt={project.title} // Use title for alt text
+        src={project.image}
+        alt={project.title}
         className="w-full h-48 object-cover"
       />
       <div className="p-6 relative">
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3> {/* Use title */}
+        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <div className="relative">
           <div
             ref={summaryRef}
             className="text-gray-600 max-h-[18.75rem] overflow-y-scroll pr-2 pb-8"
             tabIndex={0}
           >
-            {project.description} {/* Use description */}
+            {project.description}
           </div>
           {showFade && (
             <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-white to-transparent pointer-events-none" />
@@ -84,7 +83,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               </span>
             ))}
           </div>
-           {/* Conditionally render ContractLinks if listlink exists */}
           {project.listlink && <ContractLinks links={project.listlink} />}
         </div>
       </div>

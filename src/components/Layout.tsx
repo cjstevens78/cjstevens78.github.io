@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, FileText, ExternalLink, Code, Headset, Bot } fr
 import '../app/globals.css';
 
 interface LayoutProps {
-  children: React.ReactNode; // Define the type of children
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

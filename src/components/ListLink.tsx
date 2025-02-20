@@ -1,13 +1,11 @@
 import { ExternalLink, Link } from 'lucide-react';
 
-// Define an interface for each link item.
 interface ListLink {
   link: string;
   name: string;
   source: "external" | "internal";
 }
 
-// Define the props for the ContractLinks component.
 interface ContractLinksProps {
   links: ListLink[];
 }

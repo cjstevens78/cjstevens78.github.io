@@ -1,7 +1,7 @@
 import React from 'react';
 import { config } from '@/config'
 
-const Footer: React.FC = () => {  // No props needed here typically
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gray-900 text-gray-400 py-8">

@@ -2,14 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import ContractLinks from "./ListLink";
 import { config } from "@/config";
 
-// Define an interface for each link in the listlink array
 interface ListLink {
   link: string;
   name: string;
   source: "external" | "internal";
 }
 
-// Define the Project interface. Note that title and description are optional.
 interface Project {
   image?: string;
   jobtitle: string;
@@ -30,14 +28,12 @@ interface Project {
   description?: string;
 }
 
-// Define the props for ContractCard
 interface ContractCardProps {
   project: Project;
 }
 
 const ContractsDisplay = () => {
   const [showAll, setShowAll] = useState(false);
-  // Map your JSON data so that each listlink's source is cast as "external" | "internal"
   const contracts: Project[] = (config?.contracts || []).map((contract: any) => ({
     ...contract,
     listlink: contract.listlink.map((l: any) => ({
