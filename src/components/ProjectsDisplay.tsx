@@ -22,8 +22,13 @@ interface ProjectCardProps {
 }
 
 const ProjectsDisplay = () => {
-  const projects: Project[] = config?.projects || []; // Directly use config.projects
-
+  const projects: Project[] = (config?.projects || []).map((project) => ({
+    ...project,
+    listlink: project.listlink?.map((link) => ({
+      ...link,
+      source: link.source as "external" | "internal",
+    })),
+  }));
   return (
     <div className="container mx-auto px-6">
       <h2 className="text-3xl font-bold mb-12">Recent Projects</h2>
