@@ -5,7 +5,7 @@ export const config = {
     email: 'cjs78@hotmail.co.uk',
     github: 'https://github.com/cjstevens78/cjstevens78.github.io',
     linkedin: 'https://www.linkedin.com/in/chris-stevens-50b07913/',
-    cvPath: '/chris-stevens-cv-2025.pdf',
+    cvPath: 'chris_stevens_webdev_contract_2025_master.pdf',
     availability: 'Currently on a contract that is coming to an end looking for new opportunities',
     highereducation: 'University of Surrey degree in English Literature 2:1 BA Hons',
     education: '9 GCSEs 3 A Levels',
@@ -110,8 +110,8 @@ export const config = {
           "source": "external"
         },
         {
-          "link": "#",
-          "name": "Internal Example",
+          "link": "/playground",
+          "name": "Square Metre Calculator",
           "source": "internal"
         }
       ],
@@ -434,19 +434,45 @@ export const config = {
       title: 'Walgreens Boots Alliance',
       description: 'I worked with Proventeq and Tata Consulting as the sole Accessibility Specialist on a large-scale promotional offer system for Walgreens Boots Alliance (Boots.com).  Working remotely with a UK/India team, I ensured WCAG 2.1 AAA compliance for this Java (JSP)/Liferay portal (Azure DevOps) by performing ongoing accessibility reviews (using Siteimprove, AXE, NVDA, Voiceover, and manual testing) and delivering compliance reports.  My role also included front-end development, focusing on complex JavaScript/TypeScript form interactions and single-page applications based on Figma designs.  I participated in daily standups, ticket management, and other team activities.',
       image: '/images/walgreens-screenshot.jpg',
-      tags: ['Liferay', 'Eclipse', 'JSP', 'HTML5', 'CSS3', 'SASS', 'ES6 JavaScript & Typescript', 'jQuery', 'Azure DevOps (Ticketing, Pipelines etc)', 'GIT/GitHub', 'NPM', 'Node', 'Gulp', 'Visual Studio Code', 'Figma', 'WCAG 2.1 Accessibility Guidelines', 'Responsive Design', 'NVDA', 'AXE', 'Siteimprove', 'VoiceOver']
+      tags: ['WCAG 2.1 Accessibility', 'Liferay', 'Eclipse', 'JSP', 'NVDA', 'AXE', 'Siteimprove', 'VoiceOver', 'JSON', 'Javascript'],
+      listlink: [ 
+        {
+          "link": "http://www.boots.com",
+          "name": "Boots Website",
+          "source": "external"
+        }
+      ],
     },
     {
       title: '3 Chillies',
       description: 'At 3Chillies, a Microsoft-focused agency specializing in Umbraco and Sitecore for the finance sector, I developed front-end HTML templates for a new website for Odgers Berndtson (odgersberndtson.com).  Working from third-party Figma designs and wireframes, I collaborated with designers and Sitecore developers to create pixel-perfect, responsive pages and components using HTML, CSS3, SASS, JavaScript, and jQuery. Using Azure DevOps, I participated in daily standups and managed my assigned tickets.',
       image: '/images/chillies-screenshot.jpg',
-      tags: ['Sitecore', 'SASS', 'HTML5', 'Javascript', 'JQuery', 'Node', 'WCAG', 'Figma']
+      tags: ['Sitecore', 'SASS', 'HTML5', 'Javascript', 'JQuery', 'Node', 'WCAG', 'Figma'],
+      listlink: [ 
+        {
+          "link": "https://www.odgersberndtson.com/",
+          "name": "Odgers Berndtson Website",
+          "source": "external"
+        },
+        {
+          "link": "https://www.3chillies.co.uk/",
+          "name": "3 Chillies Website",
+          "source": "external"
+        }
+      ],
     },
     {
       title: 'Veolia',
-      description: 'Veolia are a large waste management services company. They were interested in bringing me on board due to my Drupal Front End experience. I worked in an agile team alongside a Drupal back end dev and a UX designer to implement complex new screens into their backend system that was used for setting up delivery and facilities tracking.',
+      description: 'Veolia are a large waste management services company. They brought me on board for a short term project due to my Drupal Front End experience. I worked with a Drupal back end dev and a UX designer to implement complex new screens into their Customer Hub system that is used for setting up delivery and facilities tracking.',
       image: '/images/veolia-screenshot.png',
-      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript']
+      tags: ['Drupal 10', 'Lando', 'Docker', 'Figma', 'PHP', 'Twig', 'SASS', 'Javascript'],
+      listlink: [ 
+        {
+          "link": "https://customerhub.veolia.co.uk/",
+          "name": "Veolia Customer Hub",
+          "source": "external"
+        }
+      ],
     }
   ],
   playground: {

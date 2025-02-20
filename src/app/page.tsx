@@ -131,7 +131,7 @@ export default function Home() {
       <section className="py-20">
         <BlogSection />
       </section>
-      {/* Playground Section */}
+      {/* Playground Section 
       <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4">{config.playground.heading}</h2>
@@ -193,6 +193,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
       {/* Contact Section */}
       <section className="bg-gray-900 text-white py-20">
         <div className="container mx-auto px-6">
@@ -209,6 +210,7 @@ export default function Home() {
                 <Mail className="w-5 h-5" />
                 Email Me
               </a>
+              {/*
               <a 
                 href={config.personal.linkedin}
                 target="_blank"
@@ -218,6 +220,7 @@ export default function Home() {
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
+              */}
             </div>
           </div>
         </div>
