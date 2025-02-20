@@ -98,7 +98,7 @@ const ContractCard = ({ project }: ContractCardProps) => {
       <img
         src={`/images/${project.image ?? "default"}-screenshot.jpg`}
         alt={project.jobtitle}
-        className="w-full h-48 object-cover"
+        className="w-full h-48 object-top object-cover"
       />
       <div className="p-6 relative">
         <div className="flex justify-between items-start mb-2">
