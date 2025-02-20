@@ -23,14 +23,24 @@ export default function Home() {
   };
 
   useEffect(() => {
+    const hasRun = sessionStorage.getItem('webhookSent');
+    if (hasRun) return;
+  
+    sessionStorage.setItem('webhookSent', 'true');
+
+    const params = new URLSearchParams(window.location.search);
+    const isFromCV = params.has('referredbycv');
+    
     fetch("/api/discordWebhook", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        event: "Page Visit",
-        details: `User visited the website at ${new Date().toLocaleString()}`,
+        event: isFromCV ? "CV Visit" : "Page Visit",
+        details: isFromCV 
+          ? `User visited the website from your cv at ${new Date().toLocaleString()}`
+          : `User visited the website at ${new Date().toLocaleString()}`,
       }),
     }).catch((error) => console.error("Error sending webhook:", error));
   }, []);
