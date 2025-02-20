@@ -29,7 +29,7 @@ export default function Home() {
     sessionStorage.setItem('webhookSent', 'true');
 
     const params = new URLSearchParams(window.location.search);
-    const isFromCV = params.has('referredbycv');
+    const isFromCV = params.has('cv');
     
     fetch("/api/discordWebhook", {
       method: "POST",
