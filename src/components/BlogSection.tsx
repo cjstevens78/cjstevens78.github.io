@@ -36,6 +36,7 @@ export default function BlogSection() {
                     {post.title}
                   </Link>
                 </h3>
+                <p className="text-sm text-gray-500 mb-2">Date posted: {post.date}</p>
                 <p className="text-gray-600 mb-4">
                   {post.content.find(isParagraph)?.text?.slice(0, 150) ?? ''}...
                 </p>
@@ -49,7 +50,6 @@ export default function BlogSection() {
                     </span>
                   ))}
                 </div>
-                <p className="text-sm text-gray-500">{post.date}</p>
               </div>
             </div>
           ))}
