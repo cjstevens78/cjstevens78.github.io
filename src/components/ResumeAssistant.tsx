@@ -18,7 +18,7 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
     {
       role: "assistant",
       content:
-        "Hello! I'm an AI assistant created by Chris. Feel free to ask me anything about him but go easy because he had to pay £5 for the API token."
+        "Hello! I'm an AI assistant created by Chris using ChatGPT Feel free to ask me anything about him."
     }
   ]);
   const [input, setInput] = useState("");
