@@ -28,7 +28,7 @@ export const config = {
     'Node.js',
     'Supabase PostGre SQL',
     'API writing & integration',
-    'TDD / CI/CD',
+    'TDD / CI/CD / Jest',
     'Public Sector GDS',
     'Local Gov Drupal',
     'PHP / Twig',
