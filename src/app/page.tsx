@@ -220,7 +220,7 @@ export default function Home() {
                 <Mail className="w-5 h-5" />
                 Email Me
               </a>
-              {/*
+              
               <a 
                 href={config.personal.linkedin}
                 target="_blank"
@@ -230,7 +230,7 @@ export default function Home() {
                 <Linkedin className="w-5 h-5" />
                 LinkedIn
               </a>
-              */}
+              
             </div>
           </div>
         </div>

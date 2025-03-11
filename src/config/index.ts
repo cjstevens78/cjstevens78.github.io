@@ -4,7 +4,7 @@ export const config = {
     role: 'Front End Web Developer & Web Accessibility Specialist',
     email: 'cjs78@hotmail.co.uk',
     github: 'https://github.com/cjstevens78/cjstevens78.github.io',
-    linkedin: 'https://www.linkedin.com/in/chris-stevens-50b07913/',
+    linkedin: 'https://www.linkedin.com/in/chris-stevens-358a11355/',
     cvPath: 'chris_stevens_webdev_contract_2025_master.pdf',
     availability: 'Currently on a contract that is coming to an end looking for new opportunities',
     highereducation: 'University of Surrey degree in English Literature 2:1 BA Hons',
