@@ -42,7 +42,8 @@ export const config = {
     'Wordpress',
     'Tailwind / SASS',
     'ASP.Net',
-    'Sitecore Umbraco'
+    'Sitecore Umbraco',
+    'Voiceover / NVDA'
   ],
   contracts: [
     {
