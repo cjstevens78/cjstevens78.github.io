@@ -33,6 +33,9 @@ export const config = {
     'Local Gov Drupal',
     'PHP / Twig',
     'Drupal 8 9 10 11',
+    'Docker',
+    'Composer',
+    'Cloud',
     'Azure',
     'Git/Github',
     'Jira / Trello',
@@ -436,7 +439,7 @@ export const config = {
   projects: [
     {
       title: 'Walgreens Boots Alliance',
-      description: 'I worked with Proventeq and Tata Consulting as the sole Accessibility Specialist on a large-scale promotional offer system for Walgreens Boots Alliance (Boots.com).  Working remotely with a UK/India team, I ensured WCAG 2.1 AAA compliance for this Java (JSP)/Liferay portal (Azure DevOps) by performing ongoing accessibility reviews (using Siteimprove, AXE, NVDA, Voiceover, and manual testing) and delivering compliance reports.  My role also included front-end development, focusing on complex JavaScript/TypeScript form interactions and single-page applications based on Figma designs.  I participated in daily standups, ticket management, and other team activities.',
+      description: 'I worked with Proventeq and Tata Consulting as the sole Accessibility Specialist on a large-scale promotional offer system for Walgreens Boots Alliance (Boots.com).  Working remotely with a UK/India team, I ensured WCAG 2.1 AA compliance for this Java (JSP)/Liferay portal (Azure DevOps) by performing ongoing accessibility reviews (using Siteimprove, AXE, NVDA, Voiceover, and manual testing) and delivering compliance reports.  My role also included front-end development, focusing on complex JavaScript/TypeScript form interactions and single-page applications based on Figma designs.  I participated in daily standups, ticket management, and other team activities.',
       image: '/images/walgreens-screenshot.jpg',
       tags: ['WCAG 2.1 Accessibility', 'Liferay', 'Eclipse', 'JSP', 'NVDA', 'AXE', 'Siteimprove', 'VoiceOver', 'JSON', 'Javascript'],
       listlink: [ 
