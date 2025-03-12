@@ -15,7 +15,7 @@ export default function Home() {
 
   const mainInputRef = useRef<HTMLInputElement>(null);
 
-  const handleSkipLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleSkipLink = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     if (mainInputRef.current) {
       mainInputRef.current.focus();
@@ -47,13 +47,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <a
-        href="#"
+      <button
         onClick={handleSkipLink}
         className="absolute left-0 top-[-100px] focus:top-0 transition-all duration-300 bg-white text-black p-2 z-50"
       >
         Skip to main content
-      </a>
+      </button>
 
       <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="container mx-auto px-6 py-24 w-full">

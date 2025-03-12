@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef } from "react";
 import ContractLinks from "./ListLink";
 import { config } from "@/config";
