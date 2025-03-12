@@ -7,9 +7,3 @@
     scroll-behavior: smooth;
   }
 }
-
-@layer components {
-  .container {
-    @apply max-w-7xl mx-auto;
-  }
-}

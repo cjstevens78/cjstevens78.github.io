@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import ContractLinks from "./ListLink";
 import { config } from "@/config";
+import Image from 'next/image';
 
 interface ListLink {
   link: string;
@@ -67,7 +68,7 @@ const ContractsDisplay = () => {
                 My work history goes back to 1999 covering all sorts of companies such as Vodafone and Arcadia Group.
                 
               </p>
-              <a href="#" className="text-blue-600 hover:underline">
+              <a href={`/${config.personal.cvPath}`} className="text-blue-600 hover:underline">
                   Click here to download my full CV
                 </a>
             </div>
@@ -91,9 +92,11 @@ const ContractCard = ({ project }: ContractCardProps) => {
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-      <img
+      <Image
         src={`/images/${project.image ?? "default"}-screenshot.jpg`}
         alt={project.jobtitle}
+        width={800}
+        height={192}
         className="w-full h-48 object-top object-cover"
       />
       <div className="p-6 relative">
@@ -108,7 +111,8 @@ const ContractCard = ({ project }: ContractCardProps) => {
           <div
             ref={summaryRef}
             className="text-gray-600 max-h-[18.75rem] overflow-y-scroll pr-2 pb-8"
-            tabIndex={0}
+            role="region"
+            aria-label="Contract summary"
           >
             {project.summary}
           </div>

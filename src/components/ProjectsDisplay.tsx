@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import ContractLinks from "./ListLink";
 import { config } from "@/config";
+import Image from 'next/image';
 
 interface ListLink {
   link: string;
@@ -53,9 +54,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-      <img
+      <Image
         src={project.image}
         alt={project.title}
+        width={800}
+        height={192}
         className="w-full h-48 object-cover"
       />
       <div className="p-6 relative">
@@ -64,7 +67,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <div
             ref={summaryRef}
             className="text-gray-600 max-h-[18.75rem] overflow-y-scroll pr-2 pb-8"
-            tabIndex={0}
+            role="region"
+            aria-label="Project description"
           >
             {project.description}
           </div>

@@ -3,7 +3,7 @@ export const blogPosts = [
     "title": "Level Up Your Web: Discovering the A11Y Project",
     "slug": "a11y-project-discovery",
     "date": "2024-10-27",
-    "author": "Your Name",
+    "author": "Chris Stevens",
     "tags": ["accessibility", "a11y", "web development", "inclusive design"],
       "content": [
       {
@@ -49,6 +49,7 @@ export const blogPosts = [
       "title": "Semantic HTML: The Foundation of Accessible Web Design",
       "slug": "semantic-html-accessibility",
       "date": "2023-05-15",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "html", "semantic web"],
       "content": [
         {
@@ -69,6 +70,7 @@ export const blogPosts = [
       "title": "ARIA Attributes: Bridging the Gap in Web Accessibility",
       "slug": "aria-attributes-accessibility",
       "date": "2023-11-02",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "aria", "web development"],
       "content": [
         {
@@ -85,6 +87,7 @@ export const blogPosts = [
       "title": "Keyboard Navigation: Building Accessible Interactions",
       "slug": "keyboard-navigation-accessibility",
       "date": "2022-08-19",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "keyboard navigation", "web development"],
       "content": [
         {
@@ -101,11 +104,16 @@ export const blogPosts = [
       "title": "Accessible Forms: Best Practices and Common Pitfalls",
       "slug": "accessible-forms",
       "date": "2024-03-08",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "forms", "web development"],
       "content": [
         {
           "type": "paragraph",
-          "text": "Forms are essential for user interaction, but they can also be a major accessibility barrier.  Follow these best practices to create accessible forms:"
+          "text": "Forms are essential for user interaction, but they can also be a major accessibility barrier. When not properly implemented, forms can prevent users with disabilities from completing crucial tasks like signing up, making purchases, or submitting information. This is why understanding and implementing accessible form design is a fundamental skill for any web developer."
+        },
+        {
+          "type": "paragraph",
+          "text": "The foundation of accessible form design starts with proper HTML structure. Semantic HTML elements like `<form>`, `<fieldset>`, `<legend>`, and `<label>` aren't just tags – they're powerful tools that communicate form structure and relationships to assistive technologies. Each form control should be properly labeled using the `<label>` element with a 'for' attribute that matches the input's ID. This creates a programmatic association that screen readers can understand and allows users to click the label to focus the input."
         },
         {
           "type": "list",
@@ -118,6 +126,18 @@ export const blogPosts = [
             "Ensure that form fields have sufficient color contrast.",
             "Avoid using placeholder text as a substitute for labels."
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Error handling is another critical aspect of form accessibility. When users make mistakes, they need to know what went wrong and how to fix it. Error messages should be clear, specific, and programmatically associated with the relevant form field using `aria-describedby`. Visual indicators of errors should not rely solely on color – use icons, text, and other visual cues to ensure the message is clear to all users, including those with color blindness. Additionally, error messages should appear in real-time when possible, rather than waiting for form submission, giving users immediate feedback about their input."
+        },
+        {
+          "type": "paragraph",
+          "text": "Form validation and feedback mechanisms need careful consideration. Client-side validation can provide immediate feedback, but it should never be the only line of defense. Server-side validation is essential, and the responses need to be equally accessible. Success messages should be announced to screen reader users, potentially using ARIA live regions. Required fields should be clearly indicated both visually and programmatically using the 'required' attribute and appropriate visual indicators. The goal is to create a form that guides users through the completion process while accommodating different abilities and interaction methods."
+        },
+        {
+          "type": "paragraph",
+          "text": "Finally, consider the overall form layout and design. Long forms should be broken into manageable sections using `<fieldset>` and `<legend>` to group related fields. The tab order should be logical and follow the visual layout of the form. Provide clear instructions at the beginning of the form about required fields, time limits (if any), and what information users need to have ready. Remember that some users may need more time to complete forms, so avoid unnecessary time limits or provide clear ways to extend them. By following these practices and regularly testing with various assistive technologies, you can create forms that are truly accessible to all users."
         }
       ]
     },
@@ -125,6 +145,7 @@ export const blogPosts = [
       "title": "Image Accessibility: Writing Effective Alt Text",
       "slug": "image-accessibility-alt-text",
       "date": "2023-01-22",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "images", "alt text"],
       "content": [
         {
@@ -141,6 +162,7 @@ export const blogPosts = [
       "title": "Color Contrast and Accessibility: Choosing Accessible Color Palettes",
       "slug": "color-contrast-accessibility",
       "date": "2022-09-05",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "color contrast", "design"],
       "content": [
         {
@@ -157,6 +179,7 @@ export const blogPosts = [
       "title": "Testing for Accessibility: Tools and Techniques",
       "slug": "accessibility-testing",
       "date": "2024-06-18",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "testing", "web development"],
       "content": [
         {
@@ -173,6 +196,7 @@ export const blogPosts = [
       "title": "Accessibility and Performance: Balancing User Experience",
       "slug": "accessibility-performance",
       "date": "2023-02-28",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "performance", "web development"],
       "content": [
         {
@@ -189,23 +213,44 @@ export const blogPosts = [
       "title": "Accessibility in React: Building Accessible Components and Applications",
       "slug": "accessibility-react",
       "date": "2024-07-12",
+      "author": "Chris Stevens",
       "tags": ["accessibility", "react", "javascript"],
       "content": [
         {
           "type": "paragraph",
-          "text": "React, like any other framework, requires careful attention to accessibility.  Building accessible React components starts with using semantic HTML and ARIA attributes correctly."
+          "text": "React has revolutionized how we build web applications, but with great power comes great responsibility. As React developers, we must ensure our applications are accessible to all users, including those who rely on assistive technologies. The good news is that React's component-based architecture actually makes it easier to implement and maintain accessibility features when done correctly."
         },
         {
           "type": "paragraph",
-          "text": "Use the `aria-` attributes in your JSX to provide additional context to screen readers.  Pay special attention to dynamic content updates.  If a component updates without a page refresh, use ARIA live regions (`aria-live`) to notify screen reader users of the changes."
+          "text": "The foundation of accessible React development starts with semantic HTML. Just because we're working with JSX doesn't mean we should forget HTML best practices. In fact, React's virtual DOM makes it even more important to use the right semantic elements. Instead of div-soup, use semantic elements like `<nav>`, `<main>`, `<article>`, `<section>`, and `<aside>`. These elements provide crucial context to assistive technologies and improve the overall structure of your application. Remember, a `<button>` element with proper keyboard handling is always better than a `<div>` with an onClick event."
         },
         {
           "type": "paragraph",
-          "text": "Ensure that all interactive elements are keyboard accessible.  Use the `tabIndex` prop judiciously, and manage focus correctly.  Use eslint plugins like `eslint-plugin-jsx-a11y` to catch common accessibility issues during development."
+          "text": "ARIA attributes play a crucial role in React applications, especially for dynamic content and custom components. React's JSX syntax makes it straightforward to add ARIA attributes, but there are some gotchas to watch out for. For example, instead of `aria-label`, you need to use `aria-label={string}` in JSX. When state changes affect content visibility or functionality, make sure to update relevant ARIA attributes accordingly. Use `aria-live` regions to announce dynamic content changes, `aria-expanded` for collapsible sections, and `aria-selected` for tabbed interfaces. The `@react-aria` library from Adobe provides excellent React hooks for complex ARIA implementations."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Use `eslint-plugin-jsx-a11y` to catch common accessibility issues during development",
+            "Implement keyboard navigation with focus management using `useRef` and `focus()`",
+            "Utilize React's `useEffect` to manage focus when content changes dynamically",
+            "Consider using established component libraries like `@reach/ui` or `@chakra-ui` that prioritize accessibility",
+            "Test components with screen readers and keyboard navigation regularly",
+            "Implement skip links for keyboard users to bypass repetitive content",
+            "Use React.Fragment to avoid unnecessary DOM elements while maintaining semantic structure"
+          ]
         },
         {
           "type": "paragraph",
-          "text": "For complex components, consider using a library like `react-aria`, which provides accessible UI components and hooks.  Test your React applications thoroughly with assistive technologies to ensure they are accessible."
+          "text": "Focus management is particularly challenging in React applications, especially with single-page applications (SPAs). When content updates dynamically, we need to ensure that focus is managed appropriately. This might mean returning focus to a trigger button after closing a modal, moving focus to new content after a route change, or maintaining a logical tab order in a complex form. React's `useRef` hook combined with the `focus()` method is your friend here. For route changes, consider using a focus management library like `react-focus-lock` or implementing a focus management system using React Router's hooks."
+        },
+        {
+          "type": "paragraph",
+          "text": "Forms in React require special attention to accessibility. While controlled components are the React way, we need to ensure they work well with assistive technologies. Use the `htmlFor` attribute (React's version of 'for') to associate labels with form controls. Implement proper error handling that announces errors to screen readers using `aria-invalid` and `aria-describedby`. Consider using form libraries like Formik or React Hook Form, but verify they produce accessible markup and handle keyboard interactions appropriately. Remember to maintain state for both the form data and any error messages that need to be communicated to assistive technologies."
+        },
+        {
+          "type": "paragraph",
+          "text": "Testing accessibility in React applications should be an integral part of your development process. Tools like Jest and React Testing Library encourage testing that mirrors how users actually interact with your application. React Testing Library's queries like `getByRole` and `getByLabelText` help ensure your components are accessible by default. Consider implementing automated accessibility testing using tools like `jest-axe` for unit tests and Cypress with `cypress-axe` for end-to-end testing. Regular manual testing with screen readers like VoiceOver or NVDA is also essential, as automated tools can't catch everything."
         }
       ]
     }
