@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from '../../src/components/Layout';
 
 const Playground: React.FC = () => {

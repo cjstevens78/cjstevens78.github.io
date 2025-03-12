@@ -1,3 +1,5 @@
+"use client";
+
 import { blogPosts } from '@/config/blog';
 import Link from 'next/link';
 
@@ -9,6 +11,15 @@ type BlogPostType = {
   tags: string[];
   content: ({ type: string; text: string; } | { type: string; items: string[]; })[];
 };
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+}
 
 function isParagraph(item: { type: string; text?: string; items?: string[] }): item is { type: string; text: string } {
   return item.type === 'paragraph' && typeof item.text === 'string';
@@ -36,7 +47,7 @@ export default function BlogSection() {
                     {post.title}
                   </Link>
                 </h3>
-                <p className="text-sm text-gray-500 mb-2">Date posted: {post.date}</p>
+                <p className="text-sm text-gray-500 mb-2">Date posted: {formatDate(post.date)}</p>
                 <p className="text-gray-600 mb-4">
                   {post.content.find(isParagraph)?.text?.slice(0, 150) ?? ''}...
                 </p>

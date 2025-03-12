@@ -5,8 +5,10 @@ import { config } from "@/config";
 import { Bot } from "lucide-react";
 
 const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
-  const inputRef = ref || useRef<HTMLInputElement>(null);
+  ResumeAssistant.displayName = 'ResumeAssistant';
   const chatContainerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const actualInputRef = ref || inputRef;
   const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY || "";
 
   const systemMessage = {
@@ -101,10 +103,11 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
         <input
           className="w-full flex-1 border p-2 rounded-l-lg"
           value={input}
-          ref={inputRef as LegacyRef<HTMLInputElement>}
+          ref={actualInputRef}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(event) => event.key === "Enter" && sendMessage()}
           placeholder="Ask a question..."
+          aria-label="Ask the AI assistant a question about Chris"
         />
         <button className="bg-blue-600 text-white px-4 py-2 rounded-r-lg" onClick={sendMessage} disabled={loading}>
           {loading ? "..." : "Send"}
@@ -112,7 +115,7 @@ const ResumeAssistant = forwardRef<HTMLInputElement>((props, ref) => {
       </div>
       <div className="mt-2 flex items-center">
         <Bot className="w-4 h-4 mr-1" />
-        <p>Stuck for ideas? Try 'What motivates him?'</p>
+        <p>Stuck for ideas? Try &quot;What motivates him?&quot;</p>
       </div>
     </div>
   );

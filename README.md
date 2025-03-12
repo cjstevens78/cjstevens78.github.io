@@ -103,11 +103,25 @@ yarn start
 
 The app will be served at `http://localhost:3000`.
 
+### Linting
+
+This project uses ESLint with the `eslint-plugin-jsx-a11y` plugin to ensure accessibility standards are met. The following commands are available:
+
+```bash
+# Run the linter
+npm run lint
+
+# Automatically fix linting issues where possible
+npm run lint:fix
+```
+
+Linting is automatically run before each production build. The configuration includes strict accessibility rules to maintain WCAG compliance.
+
 ---
 
 ## Project Structure
 
-Here’s an overview of the key files and folders in the project:
+Here's an overview of the key files and folders in the project:
 
 ```
 cjstevens78.github.io/
