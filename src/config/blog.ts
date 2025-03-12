@@ -184,11 +184,31 @@ export const blogPosts = [
       "content": [
         {
           "type": "paragraph",
-          "text": "Testing is an integral part of ensuring web accessibility.  Use a combination of automated tools and manual testing techniques."
+          "text": "In my experience, testing is an integral part of ensuring web accessibility. I use a combination of automated tools and manual testing techniques to cover all bases."
         },
         {
           "type": "paragraph",
-          "text": "Automated tools, such as WAVE and axe, can identify many common accessibility issues.  However, they can't catch everything.  Manual testing, using a keyboard and screen reader, is essential for identifying issues that automated tools might miss.  Involve people with disabilities in your testing process to get valuable feedback."
+          "text": "I've found that automated tools, such as WAVE and axe, can identify many common accessibility issues. However, they can't catch everything. That's why I always include manual testing, using a keyboard and screen reader, to identify issues that automated tools might miss. Involving people with disabilities in the testing process has provided me with invaluable feedback."
+        },
+        {
+          "type": "paragraph",
+          "text": "Automated tools like WAVE and axe are invaluable for quickly identifying accessibility issues. WAVE provides visual feedback about the accessibility of your web content directly in your browser, while axe offers a comprehensive suite of testing tools that can be integrated into your development workflow. These tools can highlight missing alt text, improper use of ARIA attributes, and other common issues."
+        },
+        {
+          "type": "paragraph",
+          "text": "Manual testing is crucial for catching issues that automated tools might miss. This includes testing with a keyboard to ensure all interactive elements are accessible and using screen readers to experience your site as a visually impaired user would. I often use popular screen readers like NVDA or VoiceOver for this purpose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Involving users with disabilities in your testing process can provide invaluable insights. Conduct user testing sessions where individuals with various disabilities navigate your site and provide feedback. This real-world testing can uncover issues that might not be apparent through automated or manual testing alone."
+        },
+        {
+          "type": "paragraph",
+          "text": "Integrating accessibility testing into your CI/CD pipeline ensures that accessibility checks are part of your regular development process. Tools like axe-core can be integrated into your CI/CD setup to automatically run accessibility tests on your codebase, catching issues early in the development cycle."
+        },
+        {
+          "type": "paragraph",
+          "text": "I also recommend using accessibility linting tools in the build process. These tools can catch common accessibility issues during development, ensuring that problems are addressed before they reach production. For instance, eslint-plugin-jsx-a11y is a great tool for React projects, as it checks for accessibility issues in JSX code."
         }
       ]
     },
