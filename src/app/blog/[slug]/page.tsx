@@ -37,7 +37,12 @@ export default function BlogPost({ params }: Props) {
 
   return (
     <div className="container mx-auto px-6 py-20">
-      <div className="w-full md:w-2/3 mx-auto">
+      <div className="w-full md:w-2/3">
+        <img
+          src={`https://source.unsplash.com/random/800x600?${post.tags.join(",")}`}
+          alt={post.title}
+          className="w-full h-64 object-cover mb-8"
+        />
         <h1 className="text-3xl font-bold mb-8">{post.title}</h1>
         <p className="text-sm text-gray-500 mb-2">{formatDate(post.date)}</p>
         <p className="text-sm text-gray-500 mb-4">By {post.author}</p>
