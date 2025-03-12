@@ -116,11 +116,6 @@ export const config = {
           "link": "https://gallaghercommunication.com",
           "name": "Gallagher Communication",
           "source": "external"
-        },
-        {
-          "link": "/playground",
-          "name": "Square Metre Calculator",
-          "source": "internal"
         }
       ],
       image: "gallagher"
