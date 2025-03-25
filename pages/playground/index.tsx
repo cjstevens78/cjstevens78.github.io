@@ -3,16 +3,16 @@
 import Layout from '../../src/components/Layout';
 
 const Playground: React.FC = () => {
-  const codepenEmbedCode = `<iframe height="300" style="width: 100%;" scrolling="no" title="Svelte Demo - Markdown Editor" src="https://codepen.io/Chris-Stevens/embed/xbxGQYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-    See the Pen <a href="https://codepen.io/Chris-Stevens/pen/xbxGQYw">Svelte Demo - Markdown Editor</a> by Chris Stevens (<a href="https://codepen.io/Chris-Stevens">@Chris-Stevens</a>) on <a href="https://codepen.io">CodePen</a>.
+  const codepenEmbedCode = `<iframe height="500" style="width: 100%;" scrolling="no" title="React Typescript From with Async API request" src="https://codepen.io/Chris-Stevens/embed/xbxGQYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href="https://codepen.io/Chris-Stevens/pen/xbxGQYw">React Typescript From with Async API request</a> by Chris Stevens (<a href="https://codepen.io/Chris-Stevens">@Chris-Stevens</a>) on <a href="https://codepen.io">CodePen</a>.
   </iframe>`;
 
-  const codepenEmbedCode2 = `<iframe height="300" style="width: 100%;" scrolling="no" title="Svelte Demo - Markdown Editor" src="https://codepen.io/Chris-Stevens/embed/xbxGQYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-    See the Pen <a href="https://codepen.io/Chris-Stevens/pen/xbxGQYw">Svelte Demo - Markdown Editor</a> by Chris Stevens (<a href="https://codepen.io/Chris-Stevens">@Chris-Stevens</a>) on <a href="https://codepen.io">CodePen</a>.
+  const codepenEmbedCode2 = `<iframe height="500" style="width: 100%;" scrolling="no" title="React Typescript From with Async API request" src="https://codepen.io/Chris-Stevens/embed/xbxGQYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href="https://codepen.io/Chris-Stevens/pen/xbxGQYw">React Typescript From with Async API request</a> by Chris Stevens (<a href="https://codepen.io/Chris-Stevens">@Chris-Stevens</a>) on <a href="https://codepen.io">CodePen</a>.
   </iframe>`;
 
-  const codepenEmbedCode3 = `<iframe height="300" style="width: 100%;" scrolling="no" title="Svelte Demo - Markdown Editor" src="https://codepen.io/Chris-Stevens/embed/xbxGQYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-    See the Pen <a href="https://codepen.io/Chris-Stevens/pen/xbxGQYw">Svelte Demo - Markdown Editor</a> by Chris Stevens (<a href="https://codepen.io/Chris-Stevens">@Chris-Stevens</a>) on <a href="https://codepen.io">CodePen</a>.
+  const codepenEmbedCode3 = `<iframe height="500" style="width: 100%;" scrolling="no" title="React Typescript From with Async API request" src="https://codepen.io/Chris-Stevens/embed/xbxGQYw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+    See the Pen <a href="https://codepen.io/Chris-Stevens/pen/xbxGQYw">React Typescript From with Async API request</a> by Chris Stevens (<a href="https://codepen.io/Chris-Stevens">@Chris-Stevens</a>) on <a href="https://codepen.io">CodePen</a>.
   </iframe>`;
 
   return (
@@ -25,7 +25,8 @@ const Playground: React.FC = () => {
           </div>
 
           <div className="container mx-auto p-6">
-            <h2 className="text-3xl font-bold mb-12">Svelte Markdown Editor</h2>
+            <h2 className="text-3xl font-bold mb-12">React Typescript Form with Async API request</h2>
+            <p className="flex space-y-4">This is a response to a test I was asked to do for a React/Typescript contract position. You can view the code in this repo <a href="https://github.com/cjstevens78/cjstevens78.github.io" target="_blank">https://github.com/cjstevens78/cjstevens78.github.io</a></p>
             <div dangerouslySetInnerHTML={{ __html: codepenEmbedCode }} />
           </div>
 
