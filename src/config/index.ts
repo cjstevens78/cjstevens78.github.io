@@ -53,13 +53,13 @@ export const config = {
       company: "Croydon Council", 
       industry: "Public Sector",
       location: "London Borough of Croydon", 
-      summary: "For nearly six years, I have been a key member of Croydon Council’s Croydon Digital Service (CDS) department, where my role has evolved across a variety of projects. Initially, I helped develop a new PHP-based Drupal 8 website on an Azure DevOps platform - a system that has since been upgraded to Drupal 10. Later, I divided my time between maintaining the Croydon site and collaborating on the development of a white-label version, known as LocalGov, for distribution to other councils. This initiative has been a resounding success, with numerous councils adopting the codebase. As the sole front-end development and accessibility specialist within a multi-disciplinary Agile team working in two-week sprints, I have also partnered with the Shaw Trust to meet WCAG 2.1 AA accessibility standards. In addition, I manage a WordPress site designed to engage digital businesses across the Croydon area.",
+      summary: "For nearly six years, I have been a key member of the Croydon Digital Service (CDS) department, where my role has evolved across a variety of projects. Initially, I helped develop a new PHP-based Drupal 8 website on an Azure DevOps platform - a system that has since been upgraded to Drupal 11. Later, I divided my time between maintaining the Croydon site and collaborating on the development of a white-label version, known as LocalGov Drupal, for distribution to other councils. This initiative has been a resounding success, with numerous councils adopting the codebase.In addition to my work with Drupal, I have been involved in developing solutions using Netcall Liberty Create, a low-code platform, enabling rapid application development for internal and public-facing services. I have also worked extensively with Vue.js to add custom front-end interactivity and enhance the user experience. Furthermore, I have been leading the redevelopment of an outdated WordPress site that promotes digital tech in the borough. This new platform is being rebuilt using Next.js React, hosted via Vercel with a Supabase Postgres SQL database. I have been the sole front-end development and accessibility specialist within a multi-disciplinary Agile team working in two-week sprints. I have also partnered with the Shaw Trust to meet WCAG 2.1 AA accessibility standards.",
       glance1: "Part of a multi disciplinary AGILE team with Trello.", 
-      glance2: "Working with PHP Drupal 10 and Wordpress platforms.", 
+      glance2: "Working with PHP Drupal 11 and Wordpress platforms.", 
       glance3: "Use of usual skillset of HTML5, CSS3/SASS, Bootstrap 4, Accessibility, Sublime, Javascript, Extensive Command Line, GitHub.", 
       glance4: "Working on an open collaborative project to provide a white label website solution for councils.", 
       link: "https://www.croydon.gov.uk",
-      tags: ['Drupal 10', 'Docker', 'Figma', 'NPM', 'Node.js', 'PHP', 'Twig', 'SASS', 'Azure', 'Javascript', 'Accessibility', 'GDS', 'GIT'],
+      tags: ['Drupal 11', 'Docker', 'Figma', 'NPM', 'Node.js', 'PHP', 'Twig', 'SASS', 'Azure', 'Javascript', 'Accessibility', 'GDS', 'GIT', 'LowCode', 'Vue.js', 'PostgreSQL', 'Next.js', 'Supabase'],
       listlink: [
         {
           "link": "http://www.croydon.gov.uk",
@@ -81,13 +81,13 @@ export const config = {
       company: "Southampton Uni (NIHR)",
       industry: "Public Sector",
       location: "Southampton, Hampshire", 
-      summary: "I collaborated with the University of Southampton to support the rollout of a newly designed website for the NIHR (National Institute for Health Research). My role involved creating component-based assets and integrating them into a CMS platform called SiteKit. Key responsibilities included building cross-browser, multi-device, and WCAG 2.1-compliant accessible webpages from Photoshop designs. I utilized a diverse skillset, including HTML5, native JavaScript, jQuery, Bootstrap 4, CSS3, Photoshop, InVision, CSS animations (including GSAP), Git, Bitbucket, and Sublime Text, while adhering to mobile-first and responsive design principles. Working within a collaborative team environment, I liaised closely with designers and developers to ensure seamless project execution and delivery.",
+      summary: "I worked with the University of Southampton to support the rollout of a newly designed website for the NIHR (National Institute for Health Research). My role involved creating component-based assets and integrating them into a React based application. Key responsibilities included building cross-browser, multi-device, and WCAG 2.1-compliant accessible webpages from Photoshop designs.",
       glance1: "Build cross browser and multi device Accessible webpages from supplied designs in Photoshop format.", 
-      glance2: "Working with a CMS platform called ‘Site Kit’ with a focus on WCAG 2.1 Accessibility.", 
-      glance3: "Use main skillset of HTML5 / Native Javascript / JQuery / Bootstrap 4 / CSS3 / Photoshop / Invision / CSS Animations inc GSAP / GIT / Bitbucket / Sublime / Mobile First / Responsive", 
+      glance2: "Working with a React based platform with a focus on WCAG 2.1 Accessibility.", 
+      glance3: "Use main skillset of HTML5 / React / Native Javascript / Bootstrap 4 / CSS3 / Photoshop / Invision / CSS Animations inc GSAP / GIT / Bitbucket / Sublime / Mobile First / Responsive", 
       glance4: "Working in a team environment, liaising with designers and developers.", 
       link: "https://www.nihr.ac.uk/",
-      tags: ['SiteKit', 'CMS', 'Accessibility', 'GDS', 'CSS3', 'SASS', 'Javascript ES6', 'JQuery', 'Figma', 'Photoshop', 'GitHub'],
+      tags: ['React', 'CMS', 'Accessibility', 'GDS', 'CSS3', 'SASS', 'Javascript ES6', 'JQuery', 'Figma', 'Photoshop', 'GitHub'],
       listlink: [ 
         {
           "link": "https://www.nihr.ac.uk/",
@@ -435,9 +435,9 @@ export const config = {
   projects: [
     {
       title: 'Walgreens Boots Alliance',
-      description: 'I worked with Proventeq and Tata Consulting as the sole Accessibility Specialist on a large-scale promotional offer system for Walgreens Boots Alliance (Boots.com).  Working remotely with a UK/India team, I ensured WCAG 2.1 AA compliance for this Java (JSP)/Liferay portal (Azure DevOps) by performing ongoing accessibility reviews (using Siteimprove, AXE, NVDA, Voiceover, and manual testing) and delivering compliance reports.  My role also included front-end development, focusing on complex JavaScript/TypeScript form interactions and single-page applications based on Figma designs.  I participated in daily standups, ticket management, and other team activities.',
+      description: 'I worked with Proventeq and Tata Consulting as the sole Front End Web Developer and Accessibility Specialist on a large-scale promotional offer system for Walgreens Boots Alliance (Boots.com). Working remotely with a UK/India team, I ensured WCAG 2.1 AA compliance for the headless Java (JSP)/Liferay portal (Azure DevOps) by performing ongoing accessibility reviews (using Siteimprove, AXE, NVDA, VoiceOver, and manual testing) and reporting to the business through compliance reports. Liferay was configured in a headless structure, with the front end built using React, consuming APIs to handle dynamic content and complex user interactions. My role also included front-end development, focusing on API-driven React applications and JavaScript/TypeScript-based form interactions, ensuring seamless user experiences based on Figma designs.',
       image: '/images/walgreens-screenshot.jpg',
-      tags: ['WCAG 2.1 Accessibility', 'Liferay', 'Eclipse', 'JSP', 'NVDA', 'AXE', 'Siteimprove', 'VoiceOver', 'JSON', 'Javascript'],
+      tags: ['WCAG 2.1 Accessibility', 'Liferay', 'Eclipse', 'JSP', 'NVDA', 'AXE', 'Siteimprove', 'VoiceOver', 'JSON', 'Javascript', 'Typescript', 'React', 'Figma', 'Headless'],
       listlink: [ 
         {
           "link": "http://www.boots.com",
